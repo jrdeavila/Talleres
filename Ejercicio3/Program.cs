@@ -10,11 +10,11 @@ namespace Ejercicio3
 class Program{
         static void Main(string[] args)
         {
-            cuenta p = datos();
+            Cuenta p = datos();
             do{}while(opciones(menu(), p));
         }
 
-        public static cuenta datos(){
+        public static Cuenta datos(){
             String nombre;
             long nCuenta;
 
@@ -23,7 +23,7 @@ class Program{
             Console.Write("# Cuenta: ");
             nCuenta = long.Parse(Console.ReadLine());
 
-            return new cuenta(nombre, nCuenta);
+            return new Cuenta(nombre, nCuenta);
         }   
 
         public static int menu(){
@@ -38,7 +38,7 @@ class Program{
             return op;
         }
 
-        public static bool opciones(int c, cuenta p){
+        public static bool opciones(int c, Cuenta p){
             bool tr = true;
             switch(c){
                 case 0:{
@@ -54,7 +54,7 @@ class Program{
                     break;
                 }
                 case 3:{
-                    Console.WriteLine("Su saldo es: {0}", p.getSaldo());
+                    Console.WriteLine("\nSu saldo es: {0}", p.getSaldo());
                     break;
                 }
             }

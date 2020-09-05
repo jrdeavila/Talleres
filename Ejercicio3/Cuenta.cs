@@ -2,13 +2,13 @@ using System;
 
 namespace Ejercicio3
 {
-    class cuenta
+    class Cuenta
     {   
         private double saldo;
         private long nCuenta;
         private string nombre;
         
-        public cuenta(string nombre, long nCuenta){
+        public Cuenta(string nombre, long nCuenta){
             this.nombre = nombre;
             this.nCuenta = nCuenta;
             this.saldo = 0;
@@ -52,11 +52,11 @@ namespace Ejercicio3
                     saldo *= -1;
                     saldo += this.getSaldo();
                     this.setSaldo(saldo);
-                    Console.WriteLine("Retiro satisfactorio....");
+                    Console.WriteLine("\nRetiro satisfactorio....");
                 }
                 else{
                     saldo = 0;
-                    Console.WriteLine("No es posible retirar, saldo insuficiente...");
+                    Console.WriteLine("\nNo es posible retirar, saldo insuficiente...");
                 }
 
                 
@@ -64,7 +64,7 @@ namespace Ejercicio3
             else{
                 saldo += this.getSaldo();
                 this.setSaldo(saldo);
-                Console.WriteLine("Saldo agregado...");
+                Console.WriteLine("\nSaldo agregado...");
             }
 
             
