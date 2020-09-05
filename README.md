@@ -2,6 +2,6 @@
 
 Autor: De avila Moreno Jose Ricardo
 Asignatura: Programacion III
-version: 2
+version: 3
 
 2020
