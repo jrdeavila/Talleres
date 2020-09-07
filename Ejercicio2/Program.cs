@@ -26,17 +26,10 @@ namespace Ejercicio2
                 sexo = sexo.ToUpper();
             }while(!"M".Equals(sexo) && !"F".Equals(sexo));
 
-            float pulse = 0;
-            if(sexo.Equals("F")){
-                pulse = 220-edad;
-                pulse /= 10;
-            }
-            else{
-                pulse = 210-edad;
-                pulse /= 10;
-            }
+            Persona pacientePrueba = new Persona(nombre,edad,sexo);
+            Logica funcion = new Logica(pacientePrueba);
 
-            Console.WriteLine("{0}, usted tiene {1} pulsaciones por cada 10 segundos...", nombre, pulse);
+            Console.WriteLine("{0}, usted tiene {1} pulsaciones por cada 10 segundos...", pacientePrueba.getNombre(), funcion.CalcularPulsaciones());
 
         }
     }
